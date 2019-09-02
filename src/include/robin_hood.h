@@ -1599,6 +1599,12 @@ public:
         return kv->getSecond();
     }
 
+    const_iterator find(const std::string_view& key) const { // NOLINT(modernize-use-nodiscard)
+        ROBIN_HOOD_TRACE(this);
+        const size_t idx = findIdx(key);
+        return const_iterator{mKeyVals + idx, mInfo + idx};
+    }
+
     const_iterator find(const key_type& key) const { // NOLINT(modernize-use-nodiscard)
         ROBIN_HOOD_TRACE(this);
         const size_t idx = findIdx(key);

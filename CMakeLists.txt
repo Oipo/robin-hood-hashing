@@ -1,9 +1,9 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.8)
 project(robin-hood-hashing LANGUAGES CXX)
 
 option(RH_sanitizer "Address sanitizer" OFF)
 option(RH_coverage "Enable coverage" OFF)
-set(RH_cxx_standard "14" CACHE STRING "C++ standard, e.g. 11, 14, 17")
+set(RH_cxx_standard "17" CACHE STRING "C++ standard, e.g. 11, 14, 17")
 
 set(CMAKE_CXX_STANDARD ${RH_cxx_standard})
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
