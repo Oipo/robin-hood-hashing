@@ -8,7 +8,10 @@ target_sources_local(rh PRIVATE
     bench_hash_int.cpp
     bench_hash_string.cpp
     bench_iterate.cpp
+    bench_quick_overall_map.cpp
+    bench_quick_overall_set.cpp
     bench_random_insert_erase.cpp
+    bench_swap.cpp
 
     # count
     count_ctor_dtor.cpp
@@ -45,6 +48,7 @@ target_sources_local(rh PRIVATE
     include_only.cpp
     unit_include_only.cpp
     unit_initializerlist.cpp
+    unit_iterator_twice_bug.cpp
     unit_iterators_ctor.cpp
     unit_iterators_empty.cpp
     unit_iterators_erase.cpp
@@ -58,12 +62,15 @@ target_sources_local(rh PRIVATE
     unit_not_moveable.cpp
     unit_overflow.cpp
     unit_overflow_collisions.cpp
+    unit_pair_operators.cpp
     unit_pair_trivial.cpp
     unit_random_verifier.cpp
     unit_reserve_and_assign.cpp
     unit_reserve.cpp
     unit_sfc64_is_deterministic.cpp
     unit_sizeof.cpp
+    unit_undefined_behavior_nekrolm.cpp
     unit_unique_ptr.cpp
+    unit_unordered_set.cpp
     unit_vectorofmaps.cpp
 )
